@@ -551,6 +551,7 @@
     self.onmessage = function(e) {
         var url = e.data.msg;
         var id = e.data.id;
+        console.log('worker.js url', url);
         fetch(url)  //e.g., url = "http://localhost:8000/de/buchholz_greedy_test.obj"
             .then(function (response) { return response.text() })  //e.g., the text (dataset) stored in an .obj file            
             .then(function (data_text) { 
