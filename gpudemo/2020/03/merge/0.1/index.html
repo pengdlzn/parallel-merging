@@ -300,6 +300,19 @@
             //            }
 
 
+            var scripts = document.getElementsByTagName("script"),
+                src = scripts[scripts.length - 1].src;
+            console.log('index.html src:', src)
+
+            var script = document.currentScript;
+            //var fullUrl = script.src;
+
+            console.log('index.html script', script)
+            //console.log('worker.js fullUrl', fullUrl)
+
+            var window_pathname = window.location.pathname
+            console.log('index.html window_pathname', window_pathname)
+
             var map_settings = {
                 'initialization': {
                     //'scale_den': 10000, //top10nl, start_scale
@@ -337,8 +350,8 @@
                     'tree_root_file_nm': 'tree_smooth.json',
                     //'tree_root_file_nm': 'tree.json',
                     'eventdiff_nm': 'eventdiff.json', //activate this entry if we want to snap to certain steps
-                    'tree_root_href': '/data/',    // with trailing slash!
-                    'tile_root_href': '/data/',
+                    'tree_root_href': window_pathname + 'data/',    // with trailing slash!
+                    'tile_root_href': window_pathname + 'data/',
                     /*
                     // See:
                     // https://geodata.nationaalgeoregister.nl/tiles/service/tms/1.0.0/
