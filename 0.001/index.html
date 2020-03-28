@@ -304,6 +304,15 @@
                 src = scripts[scripts.length - 1].src;
             console.log('index.html src:', src)
 
+            var script = document.currentScript;
+            //var fullUrl = script.src;
+
+            console.log('index.html script', script)
+            //console.log('worker.js fullUrl', fullUrl)
+
+            var window_pathname = window.location.pathname
+            console.log('index.html window_pathname', window_pathname)
+
             var map_settings = {
                 'initialization': {
                     //'scale_den': 10000, //top10nl, start_scale

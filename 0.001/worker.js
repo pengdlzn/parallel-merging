@@ -555,6 +555,9 @@
         //var scripts = document.getElementsByTagName("script"),
         //    src = scripts[scripts.length - 1].src;
         //console.log('worker.js src', src)
+
+
+
         fetch(url)  //e.g., url = "http://localhost:8000/de/buchholz_greedy_test.obj"
             .then(function (response) { return response.text() })  //e.g., the text (dataset) stored in an .obj file            
             .then(function (data_text) { 
