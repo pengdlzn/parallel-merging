@@ -1996,7 +1996,7 @@
             this$1.helper_idx_current = (this$1.helper_idx_current + 1) % this$1.worker_helpers.length;
             var content = new TileContent(this$1.msgbus, this$1.settings.texture_root_href, this$1.worker_helpers[this$1.helper_idx_current]);
             content.load(elem.url, gl); //e.g., elem.url = de/buchholz_greedy_test.obj
-            console.log('tiles.js elem.url:', elem.url);
+            console.log('tiles.js fetch_tiles elem.url:', elem.url);
             elem.content = content;
             elem.loaded = true;
             elem.last_touched = _now();
@@ -2330,7 +2330,7 @@
     {
             var this$1 = this;
 
-        console.log('tiles.js url:', url);
+        console.log('tiles.js load_ssc_tile url:', url);
         this.worker_helper.send(
             url, 
             function (data) {

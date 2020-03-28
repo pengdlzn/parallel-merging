@@ -300,6 +300,10 @@
             //            }
 
 
+            var scripts = document.getElementsByTagName("script"),
+                src = scripts[scripts.length - 1].src;
+            console.log('index.html src:', src)
+
             var map_settings = {
                 'initialization': {
                     //'scale_den': 10000, //top10nl, start_scale
